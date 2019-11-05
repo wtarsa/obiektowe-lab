@@ -3,11 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9469acf6-c29b-43c9-8372-bf9f07dda24a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/HayStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/HayStack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab3/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab3/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/HayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/HayStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/AbstractWorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/AbstractWorldMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/HayStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/UnboundedMap.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/World.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/lab1/UnboundedMapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/lab1/UnboundedMapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/HayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/Grass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/UnboundedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RectangularMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/UnboundedMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UnboundedMapTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -33,6 +39,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -53,20 +60,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.All in lab1">
-    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agh.cs.lab5.World" />
-      <module name="lab1" />
-      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.cs.lab5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.cs.lab3.World" />
       <module name="lab1" />
@@ -89,10 +82,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AnimalTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrassFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AnimalTest" />
+      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,30 +100,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnboundedMapTest.allMethodsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RectangularMapTest.isOccupiedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UnboundedMapTest" />
-      <option name="METHOD_NAME" value="allMethodsTest" />
+      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
+      <option name="METHOD_NAME" value="isOccupiedTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RectangularMapTest.objectAtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
+      <option name="METHOD_NAME" value="objectAtTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.AnimalTest" />
+      <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
+      <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
       <item itemvalue="JUnit.RectangularMapTest" />
+      <item itemvalue="JUnit.GrassFieldTest" />
       <item itemvalue="JUnit.All in lab1" />
-      <item itemvalue="JUnit.UnboundedMapTest.allMethodsTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in lab1" />
-        <item itemvalue="Application.World" />
-        <item itemvalue="JUnit.UnboundedMapTest.allMethodsTest" />
-        <item itemvalue="JUnit.AnimalTest" />
+        <item itemvalue="JUnit.GrassFieldTest" />
         <item itemvalue="JUnit.RectangularMapTest" />
+        <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
+        <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +161,7 @@
       <workItem from="1572182247489" duration="5370000" />
       <workItem from="1572197906991" duration="1825000" />
       <workItem from="1572353921809" duration="6468000" />
-      <workItem from="1572911106666" duration="246000" />
+      <workItem from="1572911106666" duration="5610000" />
     </task>
     <servers />
   </component>

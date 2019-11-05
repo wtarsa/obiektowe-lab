@@ -4,14 +4,15 @@ import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
 import agh.cs.lab4.IWorldMap;
+import java.util.Random;
 
-public class UnboundedMap extends AbstractWorldMap implements IWorldMap {
+public class GrassField extends AbstractWorldMap implements IWorldMap {
 
-    private int hayStacksNumber = 0;
+    private int tuftOfGrassNumber = 0;
     private static final Vector2d v_0_0 = new Vector2d(0, 0);
 
-    public UnboundedMap(int number){
-        this.hayStacksNumber = number;
+    public GrassField(int number){
+        this.tuftOfGrassNumber = number;
     }
 
  /*   public void mapDimensionsUpdate(Vector2d position){
@@ -26,16 +27,20 @@ public class UnboundedMap extends AbstractWorldMap implements IWorldMap {
             this.lowerLeft = this.lowerLeft.lowerLeft(animal.getPosition());
             this.upperRight = this.upperRight.upperRight(animal.getPosition());
         }
-        for(HayStack stack: stacks){
+        for(Grass stack: tufts){
             this.lowerLeft = this.lowerLeft.lowerLeft(stack.getPosition());
             this.upperRight = this.upperRight.upperRight(stack.getPosition());
         }
     }
 
-    public void placeHayStack(Vector2d position){
-        HayStack stack = new HayStack(position);
-        this.liveMapDimensionsUpdate();
-        stacks.add(stack);
+    public void placeGrassTufts(){
+        Random rand = new Random();
+        int n = this.tuftOfGrassNumber;
+        for(int i = 0; i < n; i++) {
+            Grass tuft = new Grass(new Vector2d(rand.nextInt((int) Math.sqrt(n * 10)), rand.nextInt((int) Math.sqrt(n * 10))));
+            tufts.add(tuft);
+            this.liveMapDimensionsUpdate();
+        }
     }
 
     @Override
@@ -53,9 +58,10 @@ public class UnboundedMap extends AbstractWorldMap implements IWorldMap {
         for(Animal animal : this.animals){
             if(position.equals(animal.getPosition())) return animal;
         }
-        for(HayStack stack: this.stacks){
+        for(Grass stack: this.tufts){
             if(position.equals(stack.getPosition())) return stack;
         }
         return null;
     }
+
 }

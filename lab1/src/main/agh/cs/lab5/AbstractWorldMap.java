@@ -12,7 +12,7 @@ public abstract class AbstractWorldMap implements IWorldMap {
     protected Vector2d upperRight;
     protected Vector2d lowerLeft;
     protected ArrayList<Animal> animals = new ArrayList<Animal>();
-    protected ArrayList<HayStack> stacks = new ArrayList<HayStack>();
+    protected ArrayList<Grass> tufts = new ArrayList<Grass>();
 
     @Override
     public boolean canMoveTo(Vector2d position){
