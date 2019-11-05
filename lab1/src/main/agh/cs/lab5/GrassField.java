@@ -15,6 +15,8 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
         this.tuftOfGrassNumber = number;
     }
 
+
+
  /*   public void mapDimensionsUpdate(Vector2d position){
         this.lowerLeft = position.lowerLeft(this.lowerLeft);
         this.upperRight = position.upperRight(this.upperRight);
@@ -63,5 +65,11 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
         }
         return null;
     }
+
+    @Override
+    public boolean canMoveTo(Vector2d position){
+        return (!isOccupied(position));
+    }
+
 
 }

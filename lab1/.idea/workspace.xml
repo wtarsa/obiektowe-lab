@@ -4,16 +4,10 @@
     <list default="true" id="9469acf6-c29b-43c9-8372-bf9f07dda24a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/AbstractWorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/AbstractWorldMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/HayStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/UnboundedMap.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/World.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/World.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/lab1/UnboundedMapTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/lab1/UnboundedMapTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab3/OptionsParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab3/OptionsParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab4/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab4/RectangularMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/HayStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/Grass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/UnboundedMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RectangularMapTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/UnboundedMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/UnboundedMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,14 +53,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in lab1">
+  <component name="RunManager" selected="Application.World">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agh.cs.lab3.World" />
+      <option name="MAIN_CLASS_NAME" value="agh.cs.lab5.World" />
       <module name="lab1" />
-      <option name="PROGRAM_PARAMETERS" value="r f l f f f r b b r f l b b r f f f f " />
+      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="agh.cs.lab3.*" />
+          <option name="PATTERN" value="agh.cs.lab5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,18 +104,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangularMapTest.objectAtTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="lab1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
-      <option name="METHOD_NAME" value="objectAtTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
+      <item itemvalue="Application.World" />
       <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
       <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest" />
@@ -129,11 +113,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.World" />
         <item itemvalue="JUnit.All in lab1" />
         <item itemvalue="JUnit.GrassFieldTest" />
         <item itemvalue="JUnit.RectangularMapTest" />
         <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
-        <item itemvalue="JUnit.RectangularMapTest.objectAtTest" />
       </list>
     </recent_temporary>
   </component>

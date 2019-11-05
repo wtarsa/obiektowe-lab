@@ -13,6 +13,11 @@ public class RectangularMap extends AbstractWorldMap implements IWorldMap {
     }
 
     @Override
+    public boolean canMoveTo(Vector2d position){
+        return (!isOccupied(position) && position.follows(this.lowerLeft) && position.precedes(this.upperRight));
+    }
+
+    @Override
     public void run(MoveDirection[] directions) {
         for (int i = 0; i < directions.length; i++){
             this.animals.get(i%this.animals.size()).move(directions[i]);

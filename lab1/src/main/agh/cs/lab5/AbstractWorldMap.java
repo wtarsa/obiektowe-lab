@@ -15,12 +15,15 @@ public abstract class AbstractWorldMap implements IWorldMap {
     protected ArrayList<Grass> tufts = new ArrayList<Grass>();
 
     @Override
-    public boolean canMoveTo(Vector2d position){
-        return (!isOccupied(position) && position.follows(this.lowerLeft) && position.precedes(this.upperRight));
-    }
-
-    @Override
     public boolean place(Animal animal) {
+   /*     try{
+            if(isOccupied())
+        }
+        catch (){
+
+        }
+
+    */
         if(!isOccupied(animal.getPosition())){
             this.animals.add(animal);
             return true;
