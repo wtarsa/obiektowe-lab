@@ -10,7 +10,7 @@ public class World {
         try{
             MoveDirection[] directions = new OptionsParser().parse(args);
             GrassField field = new GrassField(10);
-            field.placeGrassTufts();
+            field.placeGrassTufts(50);
             field.place(new Animal(field, new Vector2d(3, 4)));
             field.place(new Animal(field));
             field.place(new Animal(field));

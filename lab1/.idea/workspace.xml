@@ -4,12 +4,9 @@
     <list default="true" id="9469acf6-c29b-43c9-8372-bf9f07dda24a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/GrassField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/GrassField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab2/Vector2d.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab2/Vector2d.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab4/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab4/RectangularMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RectangularMapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RectangularMapTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/GrassFieldTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/GrassFieldTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +52,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.World">
+  <component name="RunManager" selected="JUnit.All in lab1">
     <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="agh.cs.lab5.World" />
       <module name="lab1" />
@@ -87,20 +84,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangularMapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrassFieldTest.orientationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
+      <option name="METHOD_NAME" value="orientationTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RectangularMapTest.isOccupiedTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrassFieldTest.tuftNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RectangularMapTest" />
-      <option name="METHOD_NAME" value="isOccupiedTest" />
+      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
+      <option name="METHOD_NAME" value="tuftNumberTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,18 +106,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
-      <item itemvalue="JUnit.RectangularMapTest" />
       <item itemvalue="JUnit.GrassFieldTest" />
       <item itemvalue="JUnit.All in lab1" />
+      <item itemvalue="JUnit.GrassFieldTest.tuftNumberTest" />
+      <item itemvalue="JUnit.GrassFieldTest.orientationTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.World" />
         <item itemvalue="JUnit.All in lab1" />
+        <item itemvalue="JUnit.GrassFieldTest.orientationTest" />
+        <item itemvalue="JUnit.GrassFieldTest.tuftNumberTest" />
+        <item itemvalue="Application.World" />
         <item itemvalue="JUnit.GrassFieldTest" />
-        <item itemvalue="JUnit.RectangularMapTest" />
-        <item itemvalue="JUnit.RectangularMapTest.isOccupiedTest" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +146,7 @@
       <workItem from="1572197906991" duration="1825000" />
       <workItem from="1572353921809" duration="6468000" />
       <workItem from="1572911106666" duration="5610000" />
-      <workItem from="1573313540716" duration="14032000" />
+      <workItem from="1573313540716" duration="19160000" />
     </task>
     <servers />
   </component>
