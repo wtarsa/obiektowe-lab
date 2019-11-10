@@ -46,6 +46,7 @@ public class RectangularMapTest {
         map.place(new Animal(map, new Vector2d(3,3)));
         map.place(new Animal(map, new Vector2d(4,1)));
         map.run(directions);
+        IWorldMap result = new RectangularMap(5, 5);
         Assert.assertEquals(" y\\x  0 1 2 3 4 5\n" +
                 "  6: -------------\n" +
                 "  5: | | | | | | |\n" +

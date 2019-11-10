@@ -1,8 +1,6 @@
 package agh.cs.lab4;
 
-import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
-import agh.cs.lab3.Animal;
 import agh.cs.lab5.AbstractWorldMap;
 
 public class RectangularMap extends AbstractWorldMap implements IWorldMap {
@@ -18,18 +16,13 @@ public class RectangularMap extends AbstractWorldMap implements IWorldMap {
     }
 
     @Override
-    public void run(MoveDirection[] directions) {
-        for (int i = 0; i < directions.length; i++){
-            this.animals.get(i%this.animals.size()).move(directions[i]);
-        }
+    public Object objectAt(Vector2d position) {
+        return fasterAnimals.get(position);
     }
 
-    @Override
-    public Object objectAt(Vector2d position) {
-        for(Animal animal : this.animals){
-            if(position.equals(animal.getPosition())) return animal;
-        }
-        return null;
+    public String toString(){
+        MapVisualizer mapInstance = new MapVisualizer(this);
+        return mapInstance.draw(lowerLeft, this.upperRight);
     }
 
 }

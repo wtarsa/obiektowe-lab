@@ -4,6 +4,7 @@ public class Vector2d {
 
     public final int x;
     public final int y;
+    public static final int sizeOfInt = 2147483647;
 
     public Vector2d(int x, int y){
         this.x = x;
@@ -49,6 +50,16 @@ public class Vector2d {
             return false;
         Vector2d that = (Vector2d) other;
         return this.x == that.x && this.y == that.y;
+    }
+
+
+    @Override
+    public int hashCode() {
+        int hash = 2137;
+        hash += (this.x * 31);
+        hash += (this.y * 17);
+        return hash;
+
     }
 
     public Vector2d opposite(){
