@@ -12,6 +12,32 @@ import org.junit.Test;
 public class GrassFieldTest {
 
     @Test
+    public void animalEatGrassTest(){
+        String[] args = {"b", "l", "f", "makarena"};
+        MoveDirection[] directions = new OptionsParser().parse(args);
+        GrassField field = new GrassField(4);
+        field.placeGrassTufts(50);
+        field.place(new Animal(field));
+        field.run(directions);
+        Assert.assertEquals(" y\\x  0 1 2 3 4 5\n" +
+                "  5: -------------\n" +
+                "  4: |*| | | | |*|\n" +
+                "  3: | | | | | | |\n" +
+                "  2: | | | | | | |\n" +
+                "  1: | |W| | | | |\n" +
+                "  0: | |*| | |*| |\n" +
+                " -1: -------------\n", field.toString());
+        Assert.assertNotEquals(" y\\x  1 2 3 4 5\n" +
+                "  5: -----------\n" +
+                "  4: | | | | |*|\n" +
+                "  3: | | | | | |\n" +
+                "  2: | | | | | |\n" +
+                "  1: |*|W| | | |\n" +
+                "  0: |*| | |*| |\n" +
+                " -1: -----------\n", field.toString());
+    }
+
+    @Test
     public void allMethodsTest(){
         String[] args = {"f", "b", "r", "l", "f", "f", "r", "r", "f", "f", "f", "f", "f", "f", "f", "f", "makarena"};
         MoveDirection[] directions = new OptionsParser().parse(args);
@@ -20,17 +46,6 @@ public class GrassFieldTest {
         field.place(new Animal(field, new Vector2d(3, 4)));
         field.place(new Animal(field));
         field.run(directions);
-        Assert.assertEquals(" y\\x  0 1 2 3 4 5 6 7 8\n" +
-                "  9: -------------------\n" +
-                "  8: | | | | | | |*|*| |\n" +
-                "  7: | | |*| | | | | | |\n" +
-                "  6: | | | | | | | | | |\n" +
-                "  5: |*| |N| | | | | | |\n" +
-                "  4: | | | | | | | | | |\n" +
-                "  3: | | | | | |*| | | |\n" +
-                "  2: |*| | |*| |*| | |*|\n" +
-                "  1: | |*| | |S| | | | |\n" +
-                "  0: -------------------\n", field.toString());
         Assert.assertNotEquals(" y\\x  0 1 2 3 4 5 6 7 8\n" +
                 "  9: -------------------\n" +
                 "  8: | | | | | | |*|*| |\n" +
@@ -41,7 +56,17 @@ public class GrassFieldTest {
                 "  3: | | | | | |*| | | |\n" +
                 "  2: |*| | |*| |*| | |*|\n" +
                 "  1: | |*| | |S| | | | |\n" +
-                "  0: | | | | | | | | | |\n" +
+                "  0: -------------------\n", field.toString());
+        Assert.assertEquals(" y\\x  0 1 2 3 4 5 6 7 8\n" +
+                "  9: -------------------\n" +
+                "  8: | | | | | | |*|*| |\n" +
+                "  7: | | |*| | | | | | |\n" +
+                "  6: | | | | | | | | | |\n" +
+                "  5: |*|N| | | | | | | |\n" +
+                "  4: | | |*| | | | | | |\n" +
+                "  3: | | | | | |*| | | |\n" +
+                "  2: |*| | |*| |*| | |*|\n" +
+                "  1: | |*| | |S| | | | |\n" +
                 "  0: -------------------\n", field.toString());
 
     }

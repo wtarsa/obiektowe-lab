@@ -9,6 +9,7 @@ import java.util.*;
 
 public class GrassField extends AbstractWorldMap implements IWorldMap {
 
+    private int seed = 0;
     private int tuftOfGrassNumber = 0;
     private static final Vector2d v_0_0 = new Vector2d(0, 0);
     public LinkedHashMap<Vector2d, Grass> tuftsMap = new LinkedHashMap<>();
@@ -37,6 +38,7 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
     }
 
     public void placeGrassTufts(int seed){
+        this.seed = seed;
         Random rand = new Random(seed);
         fillMapWithTufts(rand);
     }
@@ -44,10 +46,18 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
     private void fillMapWithTufts(Random rand){
         int n = this.tuftOfGrassNumber;
         for(int i = 0; i < n; i++) {
-            Grass tuft = new Grass(new Vector2d(rand.nextInt((int) Math.sqrt(n * 10)), rand.nextInt((int) Math.sqrt(n * 10))));
-            if(!tuftsMap.containsKey(tuft.getPosition())) tuftsMap.put(tuft.getPosition(), tuft);
-            else i--;
+            placeOneTuft(rand);
         }
+    }
+
+    private void placeOneTuft(Random rand){
+        int n = this.tuftOfGrassNumber;
+        Grass tuft;
+        do{
+            tuft = new Grass(new Vector2d(rand.nextInt((int) Math.sqrt(n * 10)), rand.nextInt((int) Math.sqrt(n * 10))));
+        }
+        while (tuftsMap.containsKey(tuft.getPosition()));
+        this.tuftsMap.put(tuft.getPosition(), tuft);
     }
 
     @Override
@@ -59,7 +69,13 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
 
     @Override
     public boolean canMoveTo(Vector2d position){
+        if(isOccupied(position) && tuftsMap.containsKey(position)){
+            Random rand = new Random(this.seed);
+            placeOneTuft(rand);
+            return true;
+        }
         return (!isOccupied(position));
+
     }
 
     public String toString(){

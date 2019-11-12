@@ -38,6 +38,7 @@ public abstract class AbstractWorldMap implements IWorldMap {
                 fasterAnimals.remove(positions[j]);
                 fasterAnimals.put(currentAnimal.getPosition(), currentAnimal);
                 i++;
+
             }
         }
     }
