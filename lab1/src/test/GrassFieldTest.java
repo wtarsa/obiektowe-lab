@@ -1,5 +1,4 @@
 
-import agh.cs.lab2.MapDirection;
 import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
@@ -12,7 +11,35 @@ import org.junit.Test;
 public class GrassFieldTest {
 
     @Test
-    public void animalEatGrassTest(){
+    public void animalEatGrassTest0(){
+        String[] args = {"f", "l", "f", "b", "b"};
+        MoveDirection[] directions = new OptionsParser().parse(args);
+        GrassField field = new GrassField(4);
+        field.placeGrassTufts(40);
+        field.place(new Animal(field));
+        field.run(directions);
+        Assert.assertEquals(" y\\x  0 1 2 3 4 5\n" +
+                "  6: -------------\n" +
+                "  5: |*| | | | |*|\n" +
+                "  4: | | | | | | |\n" +
+                "  3: | |*| |W| | |\n" +
+                "  2: | | | | | | |\n" +
+                "  1: | | | | |*| |\n" +
+                "  0: | | |*| | | |\n" +
+                " -1: -------------\n", field.toString());
+        Assert.assertNotEquals(" y\\x  0 1 2 3 4 5\n" +
+                "  6: -------------\n" +
+                "  5: |*| | | | |*|\n" +
+                "  4: | | | | | | |\n" +
+                "  3: | | | |W| | |\n" +
+                "  2: | | | | | | |\n" +
+                "  1: | | | | |*| |\n" +
+                "  0: | | |*| | | |\n" +
+                " -1: -------------\n", field.toString());
+    }
+
+    @Test
+    public void animalEatGrassTest1(){
         String[] args = {"b", "l", "f", "makarena"};
         MoveDirection[] directions = new OptionsParser().parse(args);
         GrassField field = new GrassField(4);
