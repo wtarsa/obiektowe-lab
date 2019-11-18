@@ -4,6 +4,9 @@ import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
 import agh.cs.lab3.OptionsParser;
+import agh.cs.lab4.IWorldMap;
+import agh.cs.lab7.IPositionChangeObserver;
+import agh.cs.lab5.GrassField;
 
 public class World {
     public static void main(String args[]) {

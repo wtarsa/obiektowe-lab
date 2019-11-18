@@ -4,41 +4,46 @@ import agh.cs.lab2.MoveDirection;
 import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
 import agh.cs.lab4.IWorldMap;
+import agh.cs.lab7.IPositionChangeObserver;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 
-public abstract class AbstractWorldMap implements IWorldMap {
+public abstract class AbstractWorldMap implements IWorldMap, IPositionChangeObserver {
 
     protected Vector2d upperRight;
     protected Vector2d lowerLeft;
-    protected HashMap<Vector2d, Animal> fasterAnimals = new LinkedHashMap<>();
+    protected HashMap<Vector2d, Animal> vector2dToAnimal = new LinkedHashMap<>();
+    protected List<Animal> animals = new ArrayList<>();
 
     @Override
     public boolean place(Animal animal) {
         try{
             if(isOccupied(animal.getPosition()))
                 throw new IllegalArgumentException("This field is occupied!") ;
-            this.fasterAnimals.put(animal.getPosition(), animal);
+            this.vector2dToAnimal.put(animal.getPosition(), animal);
+            animal.addObserver(this);
+            this.animals.add(animal);
             return true;
         }
         catch (IllegalArgumentException a){
             System.out.println("Exception thrown  :" + a);
             return false;
         }
+
     }
 
     @Override
     public void run(MoveDirection[] directions) {
-        for (int i = 0; i < directions.length; ) {
-            Vector2d[] positions = fasterAnimals.keySet().toArray(new Vector2d[0]);
-            for(int j = 0; j < positions.length && i < directions.length; j++){
-                Animal currentAnimal = fasterAnimals.get(positions[j]);
-                currentAnimal.move(directions[i]);
-                fasterAnimals.remove(positions[j]);
-                fasterAnimals.put(currentAnimal.getPosition(), currentAnimal);
-                i++;
 
+        for (int i = 0; i < directions.length;) {
+            for (Animal animal : animals) {
+                if (i < directions.length) {
+                    animal.move(directions[i]);
+                    i++;
+                }
             }
         }
     }
@@ -48,5 +53,10 @@ public abstract class AbstractWorldMap implements IWorldMap {
         return this.objectAt(position) != null;
     }
 
-
+    @Override
+    public void positionChanged(Vector2d oldPosition, Vector2d newPosition) {
+        Animal tmp = vector2dToAnimal.get(oldPosition);
+        vector2dToAnimal.remove(oldPosition);
+        vector2dToAnimal.put(newPosition, tmp);
+    }
 }

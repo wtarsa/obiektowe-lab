@@ -11,14 +11,13 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
 
     private int seed = 0;
     private int tuftOfGrassNumber = 0;
-    private static final Vector2d v_0_0 = new Vector2d(0, 0);
     public LinkedHashMap<Vector2d, Grass> tuftsMap = new LinkedHashMap<>();
     public GrassField(int number){
         this.tuftOfGrassNumber = number;
     }
 
     private void liveMapDimensionsUpdate(){
-        Collection<Animal> animals = fasterAnimals.values();
+        Collection<Animal> animals = vector2dToAnimal.values();
         this.upperRight = animals.iterator().next().getPosition();
         this.lowerLeft = animals.iterator().next().getPosition();
         for(Animal animal: animals){
@@ -62,7 +61,7 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
 
     @Override
     public Object objectAt(Vector2d position) {
-        if(fasterAnimals.containsKey(position)) return fasterAnimals.get(position);
+        if(vector2dToAnimal.containsKey(position)) return vector2dToAnimal.get(position);
         if(tuftsMap.containsKey(position)) return tuftsMap.get(position);
         return null;
     }

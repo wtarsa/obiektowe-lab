@@ -17,7 +17,7 @@ public class RectangularMap extends AbstractWorldMap implements IWorldMap {
 
     @Override
     public Object objectAt(Vector2d position) {
-        return fasterAnimals.get(position);
+        return vector2dToAnimal.get(position);
     }
 
     public String toString(){
