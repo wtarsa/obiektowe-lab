@@ -1,10 +1,9 @@
 package agh.cs.lab2;
 
-public class Vector2d {
+public class Vector2d{
 
     public final int x;
     public final int y;
-    public static final int sizeOfInt = 2147483647;
 
     public Vector2d(int x, int y){
         this.x = x;
@@ -66,7 +65,4 @@ public class Vector2d {
         Vector2d result = new Vector2d(this.x*(-1), this.y*(-1));
         return result;
     }
-
-
-
 }

@@ -29,6 +29,7 @@ public class MapBoundary implements IPositionChangeObserver {
         this.sortedY.remove(position);
     }
 
+
     private void updateCorners(){
         this.lowerLeft = new Vector2d(this.sortedX.get(0).x, this.sortedY.get(0).y);
         this.upperRight = new Vector2d(this.sortedX.get(this.sortedX.size()-1).x, this.sortedY.get(this.sortedY.size()-1).y);

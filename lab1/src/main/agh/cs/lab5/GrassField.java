@@ -54,6 +54,7 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
                 throw new IllegalArgumentException("This field is occupied!") ;
             this.vector2dToAnimal.put(animal.getPosition(), animal);
             animal.addObserver(this);
+            animal.addObserver(this.border);
             this.animals.add(animal);
             this.border.add(animal.getPosition());
             return true;
