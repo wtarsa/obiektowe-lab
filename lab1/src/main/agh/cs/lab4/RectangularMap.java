@@ -1,6 +1,7 @@
 package agh.cs.lab4;
 
 import agh.cs.lab2.Vector2d;
+import agh.cs.lab3.Animal;
 import agh.cs.lab5.AbstractWorldMap;
 
 public class RectangularMap extends AbstractWorldMap implements IWorldMap {
@@ -18,6 +19,22 @@ public class RectangularMap extends AbstractWorldMap implements IWorldMap {
     @Override
     public Object objectAt(Vector2d position) {
         return vector2dToAnimal.get(position);
+    }
+
+    @Override
+    public boolean place(Animal animal) {
+        try{
+            if(isOccupied(animal.getPosition()))
+                throw new IllegalArgumentException("This field is occupied!") ;
+            this.vector2dToAnimal.put(animal.getPosition(), animal);
+            animal.addObserver(this);
+            this.animals.add(animal);
+            return true;
+        }
+        catch (IllegalArgumentException a){
+            System.out.println("Exception thrown  :" + a);
+            return false;
+        }
     }
 
     public String toString(){

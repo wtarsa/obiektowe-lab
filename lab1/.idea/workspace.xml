@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9469acf6-c29b-43c9-8372-bf9f07dda24a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/agh/cs/lab7/IPositionChangeObserver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab3/Animal.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/AbstractWorldMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/AbstractWorldMap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/GrassField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab1/agh/cs/lab5/GrassField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab3/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab3/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab4/RectangularMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab4/RectangularMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/GrassField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/agh/cs/lab5/World.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,21 +53,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.World">
-    <configuration name="World" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="agh.cs.lab5.World" />
-      <module name="lab1" />
-      <option name="PROGRAM_PARAMETERS" value="f b r l f f r r f f f f f f f f makarena" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="agh.cs.lab5.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.MapBoundaryTest.integrationTest1">
     <configuration name="All in lab1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
@@ -81,11 +62,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GrassFieldTest.animalEatGrassTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="animalEatGrassTest1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,30 +82,40 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GrassFieldTest.tuftNumberTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MapBoundaryTest.integrationTest0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="lab1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GrassFieldTest" />
-      <option name="METHOD_NAME" value="tuftNumberTest" />
+      <option name="MAIN_CLASS_NAME" value="MapBoundaryTest" />
+      <option name="METHOD_NAME" value="integrationTest0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MapBoundaryTest.integrationTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MapBoundaryTest" />
+      <option name="METHOD_NAME" value="integrationTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.World" />
-      <item itemvalue="JUnit.GrassFieldTest" />
       <item itemvalue="JUnit.All in lab1" />
-      <item itemvalue="JUnit.GrassFieldTest.tuftNumberTest" />
       <item itemvalue="JUnit.GrassFieldTest.orientationTest" />
+      <item itemvalue="JUnit.GrassFieldTest.animalEatGrassTest1" />
+      <item itemvalue="JUnit.MapBoundaryTest.integrationTest0" />
+      <item itemvalue="JUnit.MapBoundaryTest.integrationTest1" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.World" />
+        <item itemvalue="JUnit.MapBoundaryTest.integrationTest1" />
+        <item itemvalue="JUnit.MapBoundaryTest.integrationTest0" />
         <item itemvalue="JUnit.All in lab1" />
+        <item itemvalue="JUnit.GrassFieldTest.animalEatGrassTest1" />
         <item itemvalue="JUnit.GrassFieldTest.orientationTest" />
-        <item itemvalue="JUnit.GrassFieldTest.tuftNumberTest" />
-        <item itemvalue="JUnit.GrassFieldTest" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +148,7 @@
       <workItem from="1572353921809" duration="6468000" />
       <workItem from="1572911106666" duration="5610000" />
       <workItem from="1573313540716" duration="30165000" />
-      <workItem from="1574095948882" duration="7015000" />
+      <workItem from="1574095948882" duration="16420000" />
     </task>
     <servers />
   </component>
@@ -181,11 +173,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java</url>
-          <line>56</line>
+          <line>39</line>
           <properties class="agh.cs.lab5.AbstractWorldMap" method="positionChanged">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/agh/cs/lab7/MapBoundary.java</url>
+          <line>31</line>
+          <properties class="agh.cs.lab7.MapBoundary" method="updateCorners">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/agh/cs/lab3/Animal.java</url>
@@ -194,13 +194,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/agh/cs/lab5/AbstractWorldMap.java</url>
-          <line>43</line>
+          <line>26</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/GrassFieldTest.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="10" />
+          <line>43</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

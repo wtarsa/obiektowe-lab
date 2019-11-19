@@ -4,6 +4,7 @@ import agh.cs.lab2.Vector2d;
 import agh.cs.lab3.Animal;
 import agh.cs.lab4.IWorldMap;
 import agh.cs.lab4.MapVisualizer;
+import agh.cs.lab7.MapBoundary;
 
 import java.util.*;
 
@@ -11,24 +12,10 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
 
     private int seed = 0;
     private int tuftOfGrassNumber = 0;
+    private MapBoundary border = new MapBoundary();
     public LinkedHashMap<Vector2d, Grass> tuftsMap = new LinkedHashMap<>();
     public GrassField(int number){
         this.tuftOfGrassNumber = number;
-    }
-
-    private void liveMapDimensionsUpdate(){
-        Collection<Animal> animals = vector2dToAnimal.values();
-        this.upperRight = animals.iterator().next().getPosition();
-        this.lowerLeft = animals.iterator().next().getPosition();
-        for(Animal animal: animals){
-            this.lowerLeft = this.lowerLeft.lowerLeft(animal.getPosition());
-            this.upperRight = this.upperRight.upperRight(animal.getPosition());
-        }
-        Collection<Grass> tufts = tuftsMap.values();
-        for(Grass stack: tufts){
-            this.lowerLeft = this.lowerLeft.lowerLeft(stack.getPosition());
-            this.upperRight = this.upperRight.upperRight(stack.getPosition());
-        }
     }
 
     public void placeGrassTufts(){
@@ -57,6 +44,24 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
         }
         while (tuftsMap.containsKey(tuft.getPosition()));
         this.tuftsMap.put(tuft.getPosition(), tuft);
+        this.border.add(tuft.getPosition());
+    }
+
+    @Override
+    public boolean place(Animal animal) {
+        try{
+            if(isOccupied(animal.getPosition()))
+                throw new IllegalArgumentException("This field is occupied!") ;
+            this.vector2dToAnimal.put(animal.getPosition(), animal);
+            animal.addObserver(this);
+            this.animals.add(animal);
+            this.border.add(animal.getPosition());
+            return true;
+        }
+        catch (IllegalArgumentException a){
+            System.out.println("Exception thrown  :" + a);
+            return false;
+        }
     }
 
     @Override
@@ -77,10 +82,15 @@ public class GrassField extends AbstractWorldMap implements IWorldMap {
 
     }
 
+    private void updateCorners(){
+        this.lowerLeft = border.getLowerLeftCorner();
+        this.upperRight = border.getUpperRightCorner();
+    }
+
     public String toString(){
-        liveMapDimensionsUpdate();
+        updateCorners();
         MapVisualizer mapInstance = new MapVisualizer(this);
-        return mapInstance.draw(lowerLeft, this.upperRight);
+        return mapInstance.draw(this.lowerLeft, this.upperRight);
 
     }
 

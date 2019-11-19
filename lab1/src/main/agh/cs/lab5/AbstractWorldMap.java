@@ -18,26 +18,9 @@ public abstract class AbstractWorldMap implements IWorldMap, IPositionChangeObse
     protected HashMap<Vector2d, Animal> vector2dToAnimal = new LinkedHashMap<>();
     protected List<Animal> animals = new ArrayList<>();
 
-    @Override
-    public boolean place(Animal animal) {
-        try{
-            if(isOccupied(animal.getPosition()))
-                throw new IllegalArgumentException("This field is occupied!") ;
-            this.vector2dToAnimal.put(animal.getPosition(), animal);
-            animal.addObserver(this);
-            this.animals.add(animal);
-            return true;
-        }
-        catch (IllegalArgumentException a){
-            System.out.println("Exception thrown  :" + a);
-            return false;
-        }
-
-    }
 
     @Override
     public void run(MoveDirection[] directions) {
-
         for (int i = 0; i < directions.length;) {
             for (Animal animal : animals) {
                 if (i < directions.length) {
