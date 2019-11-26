@@ -42,6 +42,10 @@ public class Vector2d{
         return result;
     }
 
+    public Vector2d changeValue(Vector2d tmp){
+        return tmp;
+    }
+
     public boolean equals(Object other){
         if (this == other)
             return true;

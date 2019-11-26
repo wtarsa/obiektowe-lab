@@ -51,5 +51,20 @@ public class MapBoundary implements IPositionChangeObserver {
             remove(oldPosition);
             add(newPosition);
         }
+        /*if(!newPosition.equals(oldPosition)){
+            int index = sortedX.indexOf(oldPosition);
+            sortedX.get(index).changeValue(newPosition);
+            while(index < this.sortedX.size()-1 && this.sortedX.get(index).x < this.sortedX.get(index+1).x) index++;
+            while(index < this.sortedX.size() && this.sortedX.get(index).x == this.sortedX.get(index+1).x && this.sortedX.get(index).y < this.sortedX.get(index+1).y) index++;
+            while(index > 0 && this.sortedX.get(index).x > this.sortedX.get(index-1).x) index++;
+            while(index > 0 && this.sortedX.get(index).x == this.sortedX.get(index-1).x && this.sortedX.get(index).y > this.sortedX.get(index-1).y) index++;
+
+            index = sortedY.indexOf(oldPosition);
+            sortedY.get(index).changeValue(newPosition);
+            while(index < this.sortedY.size()-1 && this.sortedY.get(index).y < this.sortedY.get(index+1).y) index++;
+            while(index < this.sortedY.size() && this.sortedY.get(index).y == this.sortedY.get(index+1).y && this.sortedY.get(index).x < this.sortedY.get(index+1).x) index++;
+            while(index > 0 && this.sortedY.get(index).y > this.sortedY.get(index-1).y) index++;
+            while(index > 0 && this.sortedY.get(index).y == this.sortedY.get(index-1).y && this.sortedY.get(index).x > this.sortedY.get(index-1).x) index++;
+        }*/
     }
 }
